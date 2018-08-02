@@ -1,46 +1,46 @@
 # GARB---Gerador-de-Arquivos-de-Remessa-Bradesco
 Gerador de arquivos de remessa CNAB 400p para o banco Bradesco
 
-## IntroduÁ„o
+## Introdu√ß√£o
 Essa biblioteca foi desenvolvida com a finalidade de ser integrada ao sistema de asseguradoras e
-cooperativas SAV, no qual tem como objetivo principal criar Arquivos de Remessa CNAB 400 posiÁıes Bradesco, para que seja
-processados todos os boletos de cobranÁa pelo banco.
+cooperativas SAV, no qual tem como objetivo principal criar Arquivos de Remessa CNAB 400 posi√ß√µes Bradesco, para que seja
+processados todos os boletos de cobran√ßa pelo banco.
 
-##DescriÁ„o do arquivo de remessa Formato CNAB
+## Descri√ß√£o do arquivo de remessa Formato CNAB
  - Registro 0 : Header Label
- - Registro 1 : TransaÁ„o
+ - Registro 1 : Transa√ß√£o
  - Registro 2 : Mensagem (opcional)
- - Registro 3 : Rateio de CrÈdito (opcional)
+ - Registro 3 : Rateio de Cr√©dito (opcional)
  - Registro 7 : Pagador Avalista (opcional)
  - Registro 9 : Trailler
  
- ##Procedimentos para criaÁ„o do arquivo e envio
- ###Procedimentos da Empresa
- Para a realizaÁ„o do teste, poder· ser transmitido quantos Arquivos Remessa lhes convier, 
- porÈm, gravados com todos os dados fictÌcios, exigidos no Lay-out, e dever· conter no m·ximo 
- 10 registros a vencer. ApÛs a oficializaÁ„o, os Arquivos Remessa poder„o conter quantos 
- registros lhes convier. Os arquivos n„o devem em hipÛtese alguma seres compactados e sim 
- zonados, bem como os registros devem ser de acordo com as especificaÁıes do Lay-out.
+ ## Procedimentos para cria√ß√£o do arquivo e envio
+ ### Procedimentos da Empresa
+ Para a realiza√ß√£o do teste, poder√° ser transmitido quantos Arquivos Remessa lhes convier, 
+ por√©m, gravados com todos os dados fict√≠cios, exigidos no Lay-out, e dever√° conter no m√°ximo 
+ 10 registros a vencer. Ap√≥s a oficializa√ß√£o, os Arquivos Remessa poder√£o conter quantos 
+ registros lhes convier. Os arquivos n√£o devem em hip√≥tese alguma seres compactados e sim 
+ zonados, bem como os registros devem ser de acordo com as especifica√ß√µes do Lay-out.
 
- ###Procedimentos do Banco
- Independentemente da quantidade de Arquivos Remessa transmitidos, referente a um ˙nico cÛdigo 
- de Empresa (Pos. 27 a 46 Reg. Header Label), ser· gerado somente um arquivo retorno.
-Mesmo que no dia anterior n„o tenha sido enviado nenhum Arquivo Remessa, ser· gerado um Arquivo 
-Retorno contendo as ocorrÍncias sobre os TÌtulos registrados anteriormente. Ex.: TÌtulos pagos, 
-baixados por decurso de prazo, com instruÁ„o de protesto, enviados para cartÛrio etc..
+ ### Procedimentos do Banco
+ Independentemente da quantidade de Arquivos Remessa transmitidos, referente a um √∫nico c√≥digo 
+ de Empresa (Pos. 27 a 46 Reg. Header Label), ser√° gerado somente um arquivo retorno.
+Mesmo que no dia anterior n√£o tenha sido enviado nenhum Arquivo Remessa, ser√° gerado um Arquivo 
+Retorno contendo as ocorr√™ncias sobre os T√≠tulos registrados anteriormente. Ex.: T√≠tulos pagos, 
+baixados por decurso de prazo, com instru√ß√£o de protesto, enviados para cart√≥rio etc..
 
-###Nome dos Arquivos Remessa 
-Bradesco Net Empresa/Webta: O Arquivo Remessa dever· ter a seguinte formataÁ„o:
+### Nome dos Arquivos Remessa 
+Bradesco Net Empresa/Webta: O Arquivo Remessa dever√° ter a seguinte formata√ß√£o:
 CBDDMM??.REM
-CB : CobranÁa Bradesco
-DD : O Dia geraÁ„o do arquivo
-MM : O MÍs da geraÁ„o do Arquivo
-?? : vari·veis alfanumÈrico-NumÈricas
+CB : Cobran√ßa Bradesco
+DD : O Dia gera√ß√£o do arquivo
+MM : O M√™s da gera√ß√£o do Arquivo
+?? : vari√°veis alfanum√©rico-Num√©ricas
 Ex.: 01, AB, A1 etc.
 
-.Rem : Extens„o do arquivo.
+.Rem : Extens√£o do arquivo.
 
 Exemplo: CB010501. REM ou CB0105AB. REM ou CB0105A1.REM
-Nota: Quando se tratar de arquivo remessa para teste, a extens„o dever· ser TST.
+Nota: Quando se tratar de arquivo remessa para teste, a extens√£o dever√° ser TST.
 
-Exemplo: CB010501. TST, o retorno ser· disponibilizado como CB010501. RST.
+Exemplo: CB010501. TST, o retorno ser√° disponibilizado como CB010501. RST.
